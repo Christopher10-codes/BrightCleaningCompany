@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Cleaning - Reliable Cleaning Services in Sandton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --yellow: #FFD700;
+            --navy: #000080;
+            --cyan: #00FFFF;
+            --light-blue: #ADD8E6;
+            --white: #FFFFFF;
+            --black: #333333;
+            --gray: #F5F5F5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--yellow);
+            margin: 0.5rem auto;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--navy);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--cyan);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin: 0.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--yellow);
+            color: var(--navy);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--cyan);
+            color: var(--navy);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--navy);
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--yellow);
+        }
+        
+        .logo span {
+            color: var(--cyan);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            color: var(--yellow);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-blue), var(--cyan));
+            color: var(--navy);
+            text-align: center;
+            padding: 10rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+            opacity: 0;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--navy);
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .about-image img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--gray);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--cyan);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--navy);
+        }
+        
+        /* Why Choose Us Section */
+        .why-us {
+            background-color: var(--white);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gray);
+            border-radius: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--gray);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--white);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: var(--gray);
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--yellow);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--navy);
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+        
+        .contact h2 {
+            color: var(--yellow);
+        }
+        
+        .contact h2::after {
+            background: var(--cyan);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--yellow);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+        
+        .contact-text a {
+            color: var(--cyan);
+        }
+        
+        .contact-text a:hover {
+            color: var(--yellow);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            margin: 0 1rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            margin: 0 0.5rem;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--yellow);
+            color: var(--navy);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--navy);
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 2rem;
+            }
+            
+            nav ul li {
+                margin: 1rem 0;
+            }
+            
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        .btn-primary {
+    background-color: var(--yellow);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background-color: var(--navy);
+    color: var(--yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--cyan);
+    color: var(--navy);
+}
+
+.btn-secondary:hover {
+    background-color: var(--navy);
+    color: var(--cyan);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo img{
+    width:80px;
+    height: 80px;
+    border-radius: 100%;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                 <img src="images/Bright cleaning logo.jpeg" alt="logo">
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Bright Cleaning – Reliable Cleaning Services in Sandton</h1>
+            <p>Homes, offices, gardens, and more – cleaned to perfection!</p>
+            <div class="hero-btns">
+                <a href="tel:0745350394" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/27745350394" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/Bright cleaning logo.jpeg" alt="logo">
+                </div>
+                <div class="about-text">
+                    <p>Bright Cleaning is a professional cleaning company based in Sandton, South Africa, dedicated to providing exceptional cleaning services to homes and businesses throughout the area.</p>
+                    <p>Our team of experienced cleaners is committed to delivering high-quality results with attention to detail, using eco-friendly products and modern cleaning techniques.</p>
+                    <p>We take pride in our reliability, professionalism, and commitment to customer satisfaction. Your clean space is our priority!</p>
+                    <a href="https://wa.me/27745350394" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Book a Cleaning</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <!-- Main Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>House Cleaning</h3>
+                    <p>Complete cleaning of all rooms, including dusting, vacuuming, mopping, and sanitizing surfaces.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Office Cleaning</h3>
+                    <p>Professional cleaning for your workspace to maintain a healthy and productive environment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Garden Cleaning</h3>
+                    <p>Lawn maintenance, hedge trimming, weeding, and overall garden tidying services.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Sanitization Services</h3>
+                    <p>Specialized disinfection and sanitization to eliminate germs and viruses from your space.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <h3>Washroom Cleaning</h3>
+                    <p>Deep cleaning and sanitization of bathrooms and toilets.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Kitchen Cleaning</h3>
+                    <p>Thorough cleaning of appliances, countertops, cabinets, and floors.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Furniture Cleaning</h3>
+                    <p>Professional cleaning of sofas, chairs, and other upholstered furniture.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rug"></i>
+                    </div>
+                    <h3>Carpet Cleaning</h3>
+                    <p>Deep cleaning and stain removal for carpets and rugs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-border-style"></i>
+                    </div>
+                    <h3>Floor Cleaning</h3>
+                    <p>Specialized cleaning for all floor types including tiles, wood, and laminate.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="https://wa.me/27745350394" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>Why Choose Bright Cleaning?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Trusted Local Cleaners</h3>
+                    <p>We're your neighbors in Sandton, with a proven track record of reliable service.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Friendly & Professional Team</h3>
+                    <p>Our cleaners are trained, vetted, and committed to your satisfaction.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Appointments</h3>
+                    <p>We work around your schedule, including weekends and evenings.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Quality cleaning services at competitive rates with no hidden fees.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Attention to Detail</h3>
+                    <p>We don't just clean - we perfect every corner of your space.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="https://wa.me/27745350394" class="btn btn-primary"><i class="fas fa-star"></i> Experience the Difference</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/carperts.jpg" alt="gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/floor.jpg" alt="gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sofa (3).jpg" alt="gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sofa (4).jpg" alt="gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sofa (5).jpg" alt="gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sofa.jpg" alt="gallery image">
+                </div>
+                
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="https://wa.me/27745350394" class="btn btn-secondary"><i class="fas fa-images"></i> Get a free Quote </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Bright Cleaning has been maintaining our office for over a year now, and we couldn't be happier. Their attention to detail is exceptional, and they're always punctual. Highly recommended!</p>
+                        <div class="testimonial-author">
+                           
+                            <div class="author-info">
+                                <h4>Musa N.</h4>
+                                <p>Office Manager, Sandton</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>I've tried several cleaning services in Sandton, but Bright Cleaning stands out. They're thorough, trustworthy, and my home has never looked better. Worth every penny!</p>
+                        <div class="testimonial-author">
+                            
+                            <div class="author-info">
+                                <h4>Likhona T.</h4>
+                                <p>Homeowner, Sandton</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>After a bad experience with another company, I was hesitant to hire cleaners again. Bright Cleaning restored my faith - professional, reliable, and they do an amazing job with my carpets!</p>
+                        <div class="testimonial-author">
+                            
+                            <div class="author-info">
+                                <h4>Patricia K.</h4>
+                                <p>Regular Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="https://wa.me/27745350394" class="btn btn-whatsapp"><i class="fas fa-comment"></i> Share Your Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Location</h3>
+                        <p>Sandton, South Africa</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p><a href="tel:0745350394">074 535 0394</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:jahbrucebhaboss@gmail.com">jahbrucebhaboss@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/27745350394">Chat with us</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://wa.me/27745350394" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Message Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/27745350394"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="copyright">© 2025 Bright Cleaning. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by <a href="https://pulsedigitallab.co.za" style="color: var(--light-blue); text-decoration: none; font-weight: 600; transition: color 0.3s ease;">Pulse Digital Lab</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27745350394" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .feature, .testimonial, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .feature, .testimonial').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.5s ease';
+        });
+        
+        document.querySelectorAll('.gallery-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'scale(0.9)';
+            element.style.transition = 'all 0.5s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
